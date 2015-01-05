@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Style.css">
+ <h1 align="center"><font align="center" color="Blue">Sporting Goods</h1>
+ <hr width="500px"/>
+<script type="text/javascript">
+
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET","goods.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+x=xmlDoc.getElementsByTagName("goods");
+
+i=0;
+
+function displaygoods()
+{
+Name=(x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue);
+Price=(x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue);
+image=(x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue);
+youtube=(x[i].getElementsByTagName("YOUTUBE")[0].childNodes[0].nodeValue);
+txt="<p><b>Name:</b> " + Name + "<br /><br />  <img src = "+image+ " width =190 height = 190> <br /><br /><b>Price:</b> " + Price+ "   </b> <br /><iframe  src = http://www.youtube.com/embed/"+youtube +" width =260 height=220><p/> " ;
+document.getElementById("showgoods").innerHTML=txt;
+}
+
+function next()
+{
+if (i<x.length-1)
+  {
+  i++;
+  displaygoods();
+  }
+}
+
+function previous()
+{
+if (i>0)
+  {
+  i--;
+  displaygoods();
+  }
+}
+</script>
+</head>
+
+<body onload="displaygoods()">
+
+<div id='showgoods'></div><br />
+
+
+<input type="button" onclick="previous()" value="Previous"/>
+<input type="button" onclick="next()" value="Next"/>
+
+</body>
+</html>

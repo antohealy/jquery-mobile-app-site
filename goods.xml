@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<goods>
+		<Name>O'Neill's Football</Name>
+		<Price>€49.99</Price>
+		<IMAGE>images/oneills.jpg</IMAGE>
+		<YOUTUBE>Rwkz7WHI0xU</YOUTUBE>
+	</goods>
+	<goods>
+		<Name>Spalding Basketball</Name>
+		<Price>€39.99</Price>
+		<IMAGE>images/spalding.jpg</IMAGE>
+		<YOUTUBE>UIXtTSDzjPA</YOUTUBE>
+	</goods>
+	<goods>
+		<Name>Galway GAA Jersey</Name>
+		<Price>€54.99</Price>
+		<IMAGE>images/jersey.jpg</IMAGE>
+		<YOUTUBE>7Ohhw8f-r2g</YOUTUBE>
+	</goods>
+	<goods>
+		<Name>Rugby Kicking Tee</Name>
+		<Price>€9.99</Price>
+		<IMAGE>images/rugbytee.jpg</IMAGE>
+		<YOUTUBE>cf6yBRNPo_A</YOUTUBE>
+	</goods>
+	
+</CATALOG>
